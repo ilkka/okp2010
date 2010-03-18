@@ -11,7 +11,7 @@ def parse_expr(expr)
   puts "expr #{expr}"
   case expr.split.size
   when 3
-    eval "#{parse_term(expr.split[0])} #{expr.split[1]} #{parse_expr(expr.split[2])}"
+    eval "parse_term(expr.split[0]) #{expr.split[1]} parse_expr(expr.split[2])"
   when 1
     parse_term(expr)
   end
@@ -19,15 +19,27 @@ end
 
 def parse_term(term)
   puts "term #{term}"
+  case term.split.size
+  when 3
+    eval "parse_factor(term.split[0]) #{term.split[1]} parse_term(term.split[2])"
+  when 1
+    parse_factor(term)
+  end
 end
 
 def parse_factor(factor)
+  puts "factor #{factor}"
+  case factor.to_s[0]
+  when "("
+    parse_expr(factor.to_s.gsub(/\((.*)\)/, '\1'))
+  else
+    parse_number(factor)
+  end
 end
 
 def parse_number(number)
-end
-
-def parse_digit(digit)
+  puts "number #{number}"
+  number.to_i
 end
 
 ARGF.each do |line|
