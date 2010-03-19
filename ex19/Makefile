@@ -9,4 +9,7 @@ pointer : pointer.o
 %.o : %.c
 	$(CC) -O0 -g -W -Wall -Werror -Wconversion -Wshadow -Wcast-qual -Wwrite-strings -ansi -pedantic -o $@ -c $<
 
-.PHONY : all
+clean : 
+	rm -f *.o pointer subscript
+
+.PHONY : all clean
