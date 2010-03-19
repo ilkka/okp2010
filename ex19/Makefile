@@ -1,10 +1,10 @@
 all : subscript pointer
 
 subscript : subscript.o
-	$(GCC) -o $@ $^
+	$(CC) -o $@ $^
 
 pointer : pointer.o
-	$(GCC) -o $@ $^
+	$(CC) -o $@ $^
 
 %.o : %.c
 	$(CC) -W -Wall -Werror -Wconversion -Wshadow -Wcast-qual -Wwrite-strings -ansi -pedantic -o $@ -c $<
