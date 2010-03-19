@@ -18,8 +18,9 @@ int main(int argc, char* argv[])
     srand(1);
 
     while(count > 0) {
-        int offset = (int) (((double)SIZE*SIZE) * (rand() / (RAND_MAX + 1.0)));
-        **(array + offset) = rand();
+        int offset1 = (int) (((double)SIZE) * (rand() / (RAND_MAX + 1.0)));
+        int offset2 = (int) (((double)SIZE) * (rand() / (RAND_MAX + 1.0)));
+        *(*(array + offset1)+offset2) = rand();
         --count;
     }
 
