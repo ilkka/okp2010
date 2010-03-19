@@ -1,8 +1,7 @@
-/*
+/* vim: sw=4 sts=4 et
  * subscript.c
- *
- *  Created on: 19.3.2010
- *      Author: ilkkala
+ * OHJ-2050 Exercise 19
+ * Ilkka Laukkanen
  */
 
 int main(int argc, char* argv[])
