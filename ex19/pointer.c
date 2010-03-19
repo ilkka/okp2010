@@ -10,7 +10,8 @@
 int main(int argc, char* argv[])
 {
     int array[SIZE][SIZE];
-    int count = SIZE * SIZE;
+    int count = SIZE * SIZE * 10;
+    int *arrptr = (int*)array;
 
     (void)argc;
     (void)argv;
@@ -18,9 +19,8 @@ int main(int argc, char* argv[])
     srand(1);
 
     while(count > 0) {
-        int offset1 = (int) (((double)SIZE) * (rand() / (RAND_MAX + 1.0)));
-        int offset2 = (int) (((double)SIZE) * (rand() / (RAND_MAX + 1.0)));
-        *(*(array + offset1)+offset2) = rand();
+        int offset = (int) (((double)SIZE*SIZE) * (rand() / (RAND_MAX + 1.0)));
+        *(arrptr + offset) = rand();
         --count;
     }
 
