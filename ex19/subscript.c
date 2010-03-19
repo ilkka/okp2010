@@ -11,7 +11,7 @@
 int main(int argc, char* argv[])
 {
     int array[SIZE][SIZE];
-    int count = SIZE * SIZE;
+    int count = SIZE * SIZE * 10;
 
     (void)argc;
     (void)argv;
