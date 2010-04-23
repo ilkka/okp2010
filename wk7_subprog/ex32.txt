@@ -1,0 +1,47 @@
+32.a) By value
+
+	swap 1-3:
+	  value = 2
+	  list = {1, 3, 5, 7, 9}
+
+32.b) By reference
+
+	swap 1:
+	  value = 1
+	  list = {2, 3, 5, 7, 9}
+
+	swap 2:
+	  value = 1
+	  list = {3, 2, 5, 7, 9}
+
+	swap 3:
+	  value = 2
+	  list = {3, 1, 5, 7, 9}
+
+32.c) By value-result
+
+	swap 1:
+	  value = 1
+	  list = {2, 3, 5, 7, 9}
+
+	swap 2:
+	  value = 1
+	  list = {3, 2, 5, 7, 9}
+
+	swap 3:
+	  value = 2
+	  list = {3, 1, 5, 7, 9}
+
+32.d) By name
+
+	swap 1:
+	  value = 1
+	  list = {2, 3, 5, 7, 9}
+
+	swap 2:
+	  value = 1
+	  list = {3, 2, 5, 7, 9}
+
+	swap 3:
+	  value = 2
+	  list = {3, 2, 1, 7, 9}
